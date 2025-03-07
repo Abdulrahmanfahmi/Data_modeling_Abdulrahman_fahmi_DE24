@@ -63,6 +63,35 @@ HospitalDepartment
 | 1                      | 1           | 1             |
 | 2                      | 1           | 2             |
 
-HospitalDoctor
 
-HospitalDoctor
+--
+Entities:
+
+**- Book**
+-ISBN
+-Name
+-title
+-author
+
+<[NOTE]> ISBN is a unique number for a book, which could be used as a 'primary key', this will make it into a 'natural key'
+
+**- Member**
+-membership_id
+-first_name
+-last_name
+-phone
+-address
+-email
+
+
+- A Member can have zero, one or several borrowings 
+- A Borrowing can be made by one and only/ one member
+- A Borrowing is linked to one and only one Book
+- A Book can be in zero, one or more borrowings
+
+Initial conceptual ERD
+<img src = "../Assets/Book_ex_2.png" width=500 >
+
+<br>
+Replaced many-to-many with bridge table (composite entity)
+<img src = "../Assets/Book_ex0_2_2.png" width=500 >
