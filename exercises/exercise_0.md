@@ -84,6 +84,13 @@ Entities:
 -email
 
 
+**Borrowing**
+- borrowing_id
+- ISBN
+- membership_id
+- return_date
+- borrow_date 
+
 - A Member can have zero, one or several borrowings 
 - A Borrowing can be made by one and only/ one member
 - A Borrowing is linked to one and only one Book
