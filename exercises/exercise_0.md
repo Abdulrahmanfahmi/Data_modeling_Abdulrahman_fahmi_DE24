@@ -102,3 +102,33 @@ Initial conceptual ERD
 <br>
 Replaced many-to-many with bridge table (composite entity)
 <img src = "../Assets/Book_ex0_2_2.png" width=500 >
+
+
+## Car rental
+
+ <img src = "../Assets/car_rental.png" width=500 >
+
+ - Customer is a person that can make rentals for cars 
+
+ - Car is the cars that can be rented by person 
+
+ - Rental (Composite entity) is transaction between customer and cars 
+
+<img src = "../Assets/carrental_descriptive.png" width=500 >
+
+  b) see image above
+  
+  c)
+
+ - customer to rental (one-to-many) 
+ - Rental to customer (many-to-one)
+ - Rental to car (many-to-one)
+ - Car to Rental (many-to-many)
+  
+
+    d)
+  - Each Customer makes one or more Rentals over time 
+  - Each Rental is connected to one customer
+  - Each Rental is for one car 
+  - Each Car can be in several Rentals
+
