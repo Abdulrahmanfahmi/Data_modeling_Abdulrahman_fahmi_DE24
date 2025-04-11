@@ -1,0 +1,29 @@
+CREATE SCHEMA IF NOT EXISTS exercises1;
+
+DROP TABLE IF NOT EXISTS exercises1.Hospital;
+DROP TABLE IF NOT EXISTS exercises1.Department;
+DROP TABLE IF NOT EXISTS exercises1.HospitalDepartment;
+
+
+CREATE TABLE IF NOT EXISTS exercises1.Hospital (
+    hospital_id SERIAL PRIMARY KEY,
+    name varchar(50) NOT NULL,
+    address varchar(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS 
+    exercises1.Department (
+        department_id SERIAL PRIMARY KEY,
+        name varchar(50) NOT NULL
+    );
+
+
+CREATE TABLE IF NOT EXISTS 
+    exercises1.HospitalDepartment (
+        hospital_id INTEGER,
+        department_id INTEGER,
+        PRIMARY KEY (hospital_id, department_id),
+        FOREIGN KEY (hospital_id) REFERENCES exercises1.hospital(hospital_id)
+        FOREIGN KEY (department_id) REFERENCES exercises1.department(department_id)        
+    );
+
